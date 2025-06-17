@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(174, 100%, 21%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom FEDGEN Colors */
+  --primary-teal: hsl(174, 100%, 21%);
+  --primary-blue: hsl(214, 100%, 40%);
+  --success-green: hsl(162, 100%, 36%);
+  --warning-orange: hsl(1, 100%, 73%);
+  --accent-cyan: hsl(178, 100%, 40%);
+  --neutral-light: hsl(210, 17%, 98%);
+  --neutral-dark: hsl(209, 20%, 25%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(174, 100%, 21%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-primary-teal {
+    background-color: var(--primary-teal);
+  }
+  
+  .bg-primary-blue {
+    background-color: var(--primary-blue);
+  }
+  
+  .bg-success-green {
+    background-color: var(--success-green);
+  }
+  
+  .bg-warning-orange {
+    background-color: var(--warning-orange);
+  }
+  
+  .bg-accent-cyan {
+    background-color: var(--accent-cyan);
+  }
+  
+  .bg-neutral-light {
+    background-color: var(--neutral-light);
+  }
+  
+  .bg-neutral-dark {
+    background-color: var(--neutral-dark);
+  }
+  
+  .text-primary-teal {
+    color: var(--primary-teal);
+  }
+  
+  .text-primary-blue {
+    color: var(--primary-blue);
+  }
+  
+  .text-success-green {
+    color: var(--success-green);
+  }
+  
+  .text-warning-orange {
+    color: var(--warning-orange);
+  }
+  
+  .text-accent-cyan {
+    color: var(--accent-cyan);
+  }
+  
+  .text-neutral-light {
+    color: var(--neutral-light);
+  }
+  
+  .text-neutral-dark {
+    color: var(--neutral-dark);
+  }
+  
+  .border-primary-teal {
+    border-color: var(--primary-teal);
+  }
+  
+  .border-primary-blue {
+    border-color: var(--primary-blue);
+  }
+  
+  .hover\:bg-primary-teal:hover {
+    background-color: var(--primary-teal);
+  }
+  
+  .hover\:bg-primary-blue:hover {
+    background-color: var(--primary-blue);
+  }
+  
+  .hover\:text-primary-teal:hover {
+    color: var(--primary-teal);
+  }
+  
+  .hover\:text-primary-blue:hover {
+    color: var(--primary-blue);
+  }
+}
+
+
+.bg-orange{
+  background: #f4822c;
+}
+
+text-orage {
+  color:#f4822c;
+}

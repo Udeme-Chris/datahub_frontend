@@ -127,10 +127,10 @@ import { Quote, Star, Building2 } from "lucide-react";
 
 export default function SocialProof() {
   const stats = [
-    { number: "500+", label: "Research Teams", sublabel: "Across 45 countries" },
-    { number: "10TB+", label: "Data Processed Daily", sublabel: "Genomic & clinical data" },
-    { number: "99.9%", label: "Uptime Reliability", sublabel: "Enterprise SLA guarantee" },
-    { number: "100+", label: "Healthcare Systems", sublabel: "Major medical centers" }
+    { number: "--+", label: "Research Teams", sublabel: "Across 45 countries" },
+    { number: "--TB+", label: "Data Processed Daily", sublabel: "Genomic & clinical data" },
+    { number: "--%", label: "Uptime Reliability", sublabel: "Enterprise SLA guarantee" },
+    { number: "--+", label: "Healthcare Systems", sublabel: "Major medical centers" }
   ];
 
   const testimonials = [

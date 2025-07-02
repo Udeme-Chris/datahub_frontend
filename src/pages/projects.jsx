@@ -3,18 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Search, Database, Users, FileText, Activity, Heart, Dna, Microscope, TestTube, Globe, Twitter, Linkedin } from "lucide-react";
-// import ProjectHeader from "./project-header";
-// import SearchSection from "./search-section";
-// import StudyCategory from "./study-category";
-import { DashboardSidebar } from "./DashboardSidebar";
-import { DashboardHeader } from "./DashboardHeader";
+import ProjectHeader from "@/components/project/project-header";
+import SearchSection from "@/components/project/search-section";
+import StudyItem from "@/components/project/study-item";
+import StudyCategory from "@/components/project/study-category";
+import WhatsNewSidebar from "../components/project/whats-new-sidebar";
 
 
-export default function DProject() {
+export default function Project() {
     const [selectedStudies, setSelectedStudies] = useState(new Set());
     const [selectedCategory, setSelectedCategory] = useState("PanCancer Studies");
 
-    const StudyCategory  = [
+    const studyCategories = [
         { title: "PanCancer Studies", count: 11, icon: Globe },
         { title: "Pediatric Cancer Studies", count: 15, icon: Heart },
         { title: "Immunogenomic Studies", count: 8, icon: Activity },
@@ -26,37 +26,19 @@ export default function DProject() {
         { title: "Bladder/Urinary Tract", count: 24, icon: Users }
     ];
 
-    const studyCategories   = [
-        { title: "PanCancer Studies", count: 11, icon: Globe },
-        { title: "Pediatric Cancer Studies", count: 15, icon: Heart },
-        { title: "Immunogenomic Studies", count: 8, icon: Activity },
-        { title: "Cell lines", count: 3, icon: Microscope },
-        { title: "PreCancerous/Healthy Studies", count: 5, icon: TestTube },
-        { title: "Adrenal Gland", count: 3, icon: Dna },
-        { title: "Ampulla of Vater", count: 1, icon: FileText },
-        { title: "Biliary Tract", count: 16, icon: Database },
-        { title: "Bladder/Urinary Tract", count: 24, icon: Users }
-    ];
-
-    const StudyItem  = [
+    const studyData = [
         { title: "MSK-CHORD (MSK, Nature 2024)", samples: 25040, type: "genomic" },
         { title: "MSK-IMPACT Clinical Sequencing Cohort (MSK, Nat Med 2017)", samples: 10945, type: "clinical" },
         { title: "Metastatic Solid Cancers (UMich, Nature 2017)", samples: 500, type: "genomic" },
         { title: "MSS Mixed Solid Tumors (Broad/Dana-Farber, Nat Genet 2018)", samples: 249, type: "proteomics" },
         { title: "SUMMIT - Neratinib Basket Study (Multi-Institute, Nature 2018)", samples: 141, type: "clinical" },
-        { title: "TMB and Immunotherapy (MSK, Nat Genet 2019)", samples: 1661, type: "genomic" },
-        { title: "Tumors with TRK fusions (MSK, Clin Cancer Res 2020)", samples: 106, type: "genomic" },
-        { title: "Cancer Cell Line Encyclopedia Hematopoiesis (MSK, Nat Genet 2020)", samples: 24146, type: "clinical" }
-    ];
-    const studyData   = [
-        { title: "MSK-CHORD (MSK, Nature 2024)", samples: 25040, type: "genomic" },
-        { title: "MSK-IMPACT Clinical Sequencing Cohort (MSK, Nat Med 2017)", samples: 10945, type: "clinical" },
-        { title: "Metastatic Solid Cancers (UMich, Nature 2017)", samples: 500, type: "genomic" },
-        { title: "MSS Mixed Solid Tumors (Broad/Dana-Farber, Nat Genet 2018)", samples: 249, type: "proteomics" },
+        { title: "SUMMIT - Neratinib Basket Study (Multi-Institute, Nature 2018)", samples: 141, type: "clinical" },
         { title: "SUMMIT - Neratinib Basket Study (Multi-Institute, Nature 2018)", samples: 141, type: "clinical" },
         { title: "TMB and Immunotherapy (MSK, Nat Genet 2019)", samples: 1661, type: "genomic" },
         { title: "Tumors with TRK fusions (MSK, Clin Cancer Res 2020)", samples: 106, type: "genomic" },
-        { title: "Cancer Cell Line Encyclopedia Hematopoiesis (MSK, Nat Genet 2020)", samples: 24146, type: "clinical" }
+        { title: "Cancer Cell Line Encyclopedia Hematopoiesis (MSK, Nat Genet 2020)", samples: 24146, type: "clinical" },
+        { title: "Cancer Cell Line Encyclopedia Hematopoiesis (MSK, Nat Genet 2020)", samples: 24146, type: "clinical" },
+        { title: "Cancer Cell Line Encyclopedia Hematopoiesis (MSK, Nat Genet 2020)", samples: 24146, type: "clinical" },
     ];
 
     const toggleStudy = (index) => {
@@ -71,8 +53,8 @@ export default function DProject() {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <DashboardHeader />
-            {/* <SearchSection /> */}
+            <ProjectHeader />
+            <SearchSection />
             
             <div className="flex">
                 {/* Main Content */}
@@ -98,9 +80,9 @@ export default function DProject() {
 
                         <div className="flex">
                             {/* Categories Sidebar */}
-                            <div className="w-80 border-r border-gray-200 p-4">
+                            <div className="w-68 border-r border-gray-200 p-4">
                                 <h3 className="font-semibold text-gray-900 mb-4">Study Categories</h3>
-                                <div className="space-y-2">
+                                <div className="space-y-2 overflow-y-auto h-96">
                                     {studyCategories.map((category, index) => (
                                         <StudyCategory
                                             key={index}
@@ -114,13 +96,13 @@ export default function DProject() {
                                 </div>
                             </div>
 
-                            {/* Studies List */}
+                           { /* Studies List */}
                             <div className="flex-1 p-4">
                                 <div className="mb-4">
                                     <h3 className="font-semibold text-gray-900 mb-2">PanCancer Studies</h3>
                                 </div>
                                 
-                                <div className="space-y-1">
+                                <div className="space-y-1  overflow-y-auto h-96">
                                     {studyData.map((study, index) => (
                                         <StudyItem
                                             key={index}
@@ -164,7 +146,7 @@ export default function DProject() {
                 </div>
 
                 {/* What's New Sidebar */}
-                {/* <WhatsNewSidebar /> */}
+                <WhatsNewSidebar />
             </div>
         </div>
     );

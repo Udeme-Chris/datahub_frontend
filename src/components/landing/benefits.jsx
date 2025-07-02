@@ -15,11 +15,11 @@ export default function Benefits() {
         "Reproducible research pipelines"
       ],
       gradient: "from-teal-500 to-green-500",
-      stats: "500+ active researchers"
+      stats: "--+ active researchers"
     },
     {
       icon: Stethoscope,
-      title: "For Clinicians", 
+      title: "For Clinicians",
       subtitle: "Enhance Patient Care",
       description: "Integrate patient data from multiple sources for evidence-based treatment decisions and personalized medicine approaches",
       features: [
@@ -30,7 +30,7 @@ export default function Benefits() {
         "Regulatory compliance tools"
       ],
       gradient: "from-blue-500 to-cyan-500",
-      stats: "100+ healthcare systems"
+      stats: "--+ healthcare systems"
     },
     {
       icon: GraduationCap,
@@ -45,7 +45,7 @@ export default function Benefits() {
         "Curriculum integration support"
       ],
       gradient: "from-cyan-500 to-green-500",
-      stats: "50+ universities"
+      stats: "--+ universities"
     }
   ];
 
@@ -61,7 +61,7 @@ export default function Benefits() {
             Whether you're conducting cutting-edge research, treating patients, or educating the next generation of scientists, our platform adapts to your specific needs
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-3 gap-12">
           {benefits.map((benefit, index) => (
             <div key={index} className="group">
@@ -105,27 +105,27 @@ export default function Benefits() {
               Our platform has enabled breakthrough discoveries and improved patient outcomes across diverse healthcare settings
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl font-bold">85%</span>
+                <span className="text-white text-xl font-bold">--%</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Faster Data Analysis</h4>
               <p className="text-gray-600">Researchers report significantly faster data processing and analysis workflows</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl font-bold">92%</span>
+                <span className="text-white text-xl font-bold">--%</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Improved Collaboration</h4>
               <p className="text-gray-600">Teams experience better cross-institutional collaboration and data sharing</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl font-bold">78%</span>
+                <span className="text-white text-xl font-bold">--%</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Better Patient Outcomes</h4>
               <p className="text-gray-600">Clinicians report improved decision-making with integrated patient data</p>

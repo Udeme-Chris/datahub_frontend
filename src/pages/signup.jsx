@@ -69,10 +69,10 @@ export default function SignUp() {
                   <img src={logo} alt="Fedgen healthEduApp logo" className="w-12 h-12" />
 
               </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">FEDGEN</h1>
-                <p className="text-sm text-gray-500 -mt-1">HealthEduApp DataHub</p>
-              </div>
+            <div>
+              <div className="font-bold text-primary text-xl">FEDGEN DataHub</div>
+              <div className="text-xs text-muted-foreground">Health Data Platform</div>
+            </div>
             </div>
             </Link>
 

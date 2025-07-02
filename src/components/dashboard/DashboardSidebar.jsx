@@ -19,13 +19,13 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 export function DashboardSidebar({ activeTab }) {
   const [collapsed, setCollapsed] = useState(false);
 
-const mainMenuItems = [
+  const mainMenuItems = [
     { title: "Dashboard", icon: BarChart3, key: "dashboard", path: "/dashboard" },
     { title: "Data Sources", icon: Database, key: "data-sources", path: "/data-sources" },
     { title: "Visualizations", icon: BarChart3, key: "visualizations", path: "/visualization" },
-    { title: "Data Extraction", icon: Download, key: "data-extraction", path: "/data-extraction" }, // Changed icon to Folder for Data Extraction
-    { title: "Projects", icon: Folder, key: "projects", path: "/project" },
-];
+    { title: "Data Extraction", icon: Download, key: "data-extraction", path: "/data-extraction" }, 
+    { title: "Projects", icon: Folder, key: "projects", external: true, path: "/projects" },
+  ];
 
   const settingsItems = [
     { title: "Settings", icon: Settings, key: "settings", path: "/setting" },
@@ -57,15 +57,27 @@ const mainMenuItems = [
             <SidebarMenu>
               {mainMenuItems.map((item) => (
                 <SidebarMenuItem key={item.key}>
-                  <Link to={item.path}>
-                    <SidebarMenuButton
-                      isActive={activeTab === item.key}
-                      className="flex items-center"
-                    >
-                      <item.icon className="w-5 h-5" />
-                      {!collapsed && <span className="ml-3">{item.title}</span>}
-                    </SidebarMenuButton>
-                  </Link>
+                  {item.external ? (
+                    <a href={item.path} target="_blank" rel="noopener noreferrer">
+                      <SidebarMenuButton
+                        isActive={activeTab === item.key}
+                        className="flex items-center"
+                      >
+                        <item.icon className="w-5 h-5" />
+                        {!collapsed && <span className="ml-3">{item.title}</span>}
+                      </SidebarMenuButton>
+                    </a>
+                  ) : (
+                    <Link to={item.path}>
+                      <SidebarMenuButton
+                        isActive={activeTab === item.key}
+                        className="flex items-center"
+                      >
+                        <item.icon className="w-5 h-5" />
+                        {!collapsed && <span className="ml-3">{item.title}</span>}
+                      </SidebarMenuButton>
+                    </Link>
+                  )}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>

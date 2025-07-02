@@ -7,14 +7,14 @@ export default function Features() {
       title: "Multi-Format Data Integration",
       description: "Connect genomics (FASTQ, BAM, VCF), clinical (CSV, JSON), imaging (DICOM), and IoT device data seamlessly with automated format detection",
       gradient: "from-teal-500 to-green-500",
-      stats: "50+ data formats"
+      stats: "--+ data formats"
     },
     {
       icon: TrendingUp,
       title: "Real-time Visualization",
       description: "Create interactive dashboards with bar charts, line graphs, heatmaps, and scatter plots. Share insights instantly with live collaboration",
       gradient: "from-blue-500 to-cyan-500",
-      stats: "15+ chart types"
+      stats: "--+ chart types"
     },
     {
       icon: Users,
@@ -100,7 +100,7 @@ export default function Features() {
             From genomic sequencing to clinical trials, our platform provides end-to-end solutions for modern healthcare research with enterprise-grade security and performance
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
@@ -136,15 +136,15 @@ export default function Features() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white bg-opacity-20 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold">10TB+</div>
+                <div className="text-2xl font-bold">--TB+</div>
                 <div className="text-sm opacity-80">Data Processed Daily</div>
               </div>
               <div className="bg-white bg-opacity-20 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold">500+</div>
+                <div className="text-2xl font-bold">--+</div>
                 <div className="text-sm opacity-80">Research Projects</div>
               </div>
               <div className="bg-white bg-opacity-20 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold">99.9%</div>
+                <div className="text-2xl font-bold">--%</div>
                 <div className="text-sm opacity-80">Uptime SLA</div>
               </div>
               <div className="bg-white bg-opacity-20 rounded-xl p-4 text-center">

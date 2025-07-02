@@ -14,7 +14,7 @@ export default function Header() {
               {/* <Dna className="text-red-800 text-lg" size={20} /> */}
             </div>
             <div>
-              <h1 className="text-xl font-bold text-neutral-dark">FEDGEN</h1>
+              <h1 className="text-xl font-bold text-neutral-dark">FEDGEN DATAHUB</h1>
               <p className="text-sm text-gray-800 -mt-1">HealthEduApp DataHub</p>
             </div>
           </div>
